@@ -66,7 +66,7 @@ python3 RsaCtfTool.py --uncipher 13328797044862662040031336230712258541783627901
 Output 2: `utf-8 : _cl0se_prim3s_w3r3_w4st3_0f_c0mput3r_Cycl35}`
 
 FIRST BLOOD !
-https://www.youtube.com/watch?v=rr1AnWzZod0
+
 
 # Broken
 
@@ -128,24 +128,24 @@ Payload: `?0=0e215962017&1[]=1&2[]=2`
 
 # PHP Is Easy !!!
 
-![](phpiseasy1.png)
+![phpiseasy1](https://user-images.githubusercontent.com/85615795/176325403-bcd9e40f-7ef4-4940-a857-c989ab15e15e.png)
 
 Type Juggling  Hash collision, just need a md5 result start with `0e` 
 Payload: `?0ni0n=s878926199a`
 
 # EHC Hair Salon
 
-![](hairsalon1.png)
+![hairsalon1](https://user-images.githubusercontent.com/85615795/176325391-1ada3b08-7978-4060-bfb8-80b80f56c98a.png)
 
 Submit the `{a+b}` payload resulting `200 OK`, while submitting `{{a+b}}` cause
 `500 Internal Server Error`.
 
-![](hairsalon2.png)
+![hairsalon2](https://user-images.githubusercontent.com/85615795/176325441-a479d31e-42f3-430c-b842-8620f3edca70.png)
 
 This is highly vulnerable to Jinja2 SSTI payloads, so we endup listing files with: 
 `{{cycler.__init__.__globals__.os.listdir()}}`
 
-![](hairsalon3.png)
+![hairsalon3](https://user-images.githubusercontent.com/85615795/176325458-53664c9e-a7b2-42ff-83f0-ed165b0a30ec.png)
 
 Generic payloads for reading remote file:
 ```
@@ -165,18 +165,19 @@ Thanks PayloadAllTheThing.
 
 # Có Giòn Không ?
 
-![](gion1.png)
+![gion1](https://user-images.githubusercontent.com/85615795/176325506-72c70432-f48c-4864-b1f1-5a65fd1b15af.png)
 
 `Unserialize()` and magic `method __destruct()`. We already know what to do. \
 Class main have magic `method __destruct()`, and this create a new class \
 based on `$class parameter`. After that creating cc class with parameter `$this->param.`
 
-![](gion2.png)
+![gion2](https://user-images.githubusercontent.com/85615795/176325517-28beb0ca-11e2-451e-a8eb-5f811506c4ff.png)
+
 
 In the other hand `do_nothing` class return the value of inaccessible value
 with magic method `__get` so we use this class to create `cc` as class name
 
-![](gion3.png)
+![gion3](https://user-images.githubusercontent.com/85615795/176325525-14cd8985-14dc-41db-8eb5-8bb08e105608.png)
 
 We have to inject the main object, which contains the class name and
 parameter that we controlled. \
@@ -184,7 +185,7 @@ We used `FilesystemIterator` class to get to the flag and `SplFileInfo` to
 read the flag file .
 POC:
 
-![](gion3.png)
+![gion4](https://user-images.githubusercontent.com/85615795/176325538-d1a0f65c-1c4f-4a00-a4c7-61807aab1beb.png)
 
 Flag: `FPTUHacking{Ch4ll nhu n4y c0 d0n kh0ng h1h1 !!!}`
 
@@ -204,10 +205,4 @@ print(flag)
 
 #FPTUHacking{Welcome_to_the_first_easy_RE_chall_!!!}
 ```
-
-
-
-
-
-
 
