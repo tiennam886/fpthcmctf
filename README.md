@@ -66,6 +66,7 @@ python3 RsaCtfTool.py --uncipher 13328797044862662040031336230712258541783627901
 Output 2: `utf-8 : _cl0se_prim3s_w3r3_w4st3_0f_c0mput3r_Cycl35}`
 
 FIRST BLOOD !
+https://www.youtube.com/watch?v=rr1AnWzZod0
 
 # Broken
 
@@ -109,7 +110,8 @@ Flag: `FPTUHacking{ban_qua_hu,ban_da_bi_Antoine_nhot_vao_js_jail}`
 # Piece Of Cake
 Param 0 is Hash Collision  Any magic hash string 
 
-![](pieceofcake1.png)
+![pieceofcake1](https://user-images.githubusercontent.com/85615795/176325077-505d9e9b-eff8-427d-8e36-e6db02748703.png)
+
 
 All parameter we send by the query string are passed to the `$_GET[]` array. \
 Therefore we can pass this array `?1[]=1` to the query string and when the \
